@@ -8,6 +8,8 @@ import { RFValue } from "react-native-responsive-fontsize";
 import WebView from "react-native-webview";
 import { CartContext } from "../../../../Context/Context";
 
+// Importar la librería para Chromecast
+import { CastButton } from 'react-native-google-cast'; // Si estás usando Google Cast
 
 const DetalleNivelVideo = () => {
     const route = useRoute();
@@ -16,8 +18,7 @@ const DetalleNivelVideo = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [videoDuration, setVideoDuration] = useState(0);
     const [botonActive, setBotonActive] = useState("Tutorial");
-        const {closed, setClosed, userRegistro, idiomaActual} = useContext(CartContext)
-    
+    const { closed, setClosed, userRegistro, idiomaActual } = useContext(CartContext);
 
     useEffect(() => {
         navigation.setOptions({ title: ejercicio.nombre });
@@ -29,11 +30,31 @@ const DetalleNivelVideo = () => {
         return `${minutes}:${seconds < 10 ? '0' : ''}${seconds} min`;
     };
 
-    useEffect(()=>{
-        setVideoDuration(ejercicio.duracion)
-    },[])
+    useEffect(() => {
+        setVideoDuration(ejercicio.duracion);
+    }, []);
 
-
+    // Función para enviar al TV (Chromecast)
+    const sendToChromecast = () => {
+        if (ejercicio.videoURL) {
+            const media = {
+                streamType: 'BUFFERED',
+                contentUrl: `https://player.vimeo.com/video/${ejercicio.videoURL}`,
+                contentType: 'video/mp4',
+                metadata: {
+                    title: ejercicio.nombre,
+                    subtitle: 'Ejemplo de video',
+                },
+            };
+            
+            // Enviar contenido a Chromecast
+            try {
+                CastButton.sendMedia(media);
+            } catch (error) {
+                console.error("Error al enviar al Chromecast", error);
+            }
+        }
+    };
 
     return (
         <ScrollView>
@@ -50,16 +71,17 @@ const DetalleNivelVideo = () => {
                                 ))}
                             </View>
                         </View>
-                       
                     </View>
-                    <Text style={{color:"white", letterSpacing:2, fontSize:25, marginBottom:10}}>{botonActive}</Text>
+                    <Text style={{ color: "white", letterSpacing: 2, fontSize: 25, marginBottom: 10 }}>
+                        {botonActive}
+                    </Text>
                     
                     {/* Video Container */}
                     <View style={{ width: "90%", height: 200 }}>
                         {
-                            botonActive !== "Tutorial" ?
+                            botonActive !== "Tutorial" ? 
                             <WebView
-                            source={{ uri: `https://player.vimeo.com/video/${ejercicio.videoURL}?controls=1&autoplay=1`}}
+                                source={{ uri: `https://player.vimeo.com/video/${ejercicio.videoURL}?controls=1&autoplay=1` }}
                                 style={{ width: "100%", height: "100%" }}
                                 allowsFullscreenVideo={true}
                                 javaScriptEnabled={true}
@@ -67,47 +89,38 @@ const DetalleNivelVideo = () => {
                             />
                             :
                             <WebView
-                            source={{ uri: `https://player.vimeo.com/video/${ejercicio.videoTrailerURL}?controls=1&autoplay=1`}}
-                            style={{ width: "100%", height: "100%" }}
-                            allowsFullscreenVideo={true}
-                            javaScriptEnabled={true}
-                            mediaPlaybackRequiresUserAction={false}
-                        />
+                                source={{ uri: `https://player.vimeo.com/video/${ejercicio.videoTrailerURL}?controls=1&autoplay=1` }}
+                                style={{ width: "100%", height: "100%" }}
+                                allowsFullscreenVideo={true}
+                                javaScriptEnabled={true}
+                                mediaPlaybackRequiresUserAction={false}
+                            />
                         }
                     </View>
-
                     
                     <View style={{ width: RFValue(300), borderWidth: 3, borderColor: "hsl(199, 76%, 28%)", marginTop: 20 }}>
                         <Image source={{ uri: ejercicio.imagenVideo }} style={{ width: "100%", height: RFValue(120) }} />
                     </View>
-                    
+
+                    {/* Botón de transmisión */}
                     <View style={{ marginTop: 40, display: "flex", flexDirection: "row", alignItems: "center", gap: 12 }}>
                         <View style={{ display: "flex", gap: 12, width: "90%", marginBottom: 30, justifyContent: "center", flexDirection: "row" }}>
                             <TouchableOpacity 
-                                style={ botonActive === "Tutorial" ?styles.botonOn : styles.botonDesactivado}
+                                style={botonActive === "Tutorial" ? styles.botonOn : styles.botonDesactivado}
                                 onPress={() => setBotonActive("Tutorial")}
                             >
-                                
-                                {idiomaActual === "espana" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
-                                {idiomaActual === "italia" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
-                                {idiomaActual === "francia" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutoriel</Text>}
-                                {idiomaActual === "bandera" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
-                                {idiomaActual === "paises bajos" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
-                                {idiomaActual === "inglaterra" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
+                                <Text style={{ color: "white", textAlign: "center", letterSpacing: 1 }}>Tutorial</Text>
                             </TouchableOpacity>
+
                             <TouchableOpacity 
-                                style={ botonActive === "Training" ? styles.botonOn : styles.botonDesactivado }
-                                onPress={() => setBotonActive("Training")}>
-                               {idiomaActual === "espana" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Entrenamiento</Text>}
-                               {idiomaActual === "italia" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Allenamento</Text>}
-                               {idiomaActual === "francia" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Entraînement</Text>}
-                               {idiomaActual === "bandera" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Training</Text>}
-                               {idiomaActual === "paises bajos" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Training</Text>}
-                               {idiomaActual === "inglaterra" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Training</Text>}
-
-
+                                style={botonActive === "Training" ? styles.botonOn : styles.botonDesactivado}
+                                onPress={() => setBotonActive("Training")}
+                            >
+                                <Text style={{ color: "white", textAlign: "center", letterSpacing: 1 }}>Entrenamiento</Text>
                             </TouchableOpacity>
                         </View>
+
+                      
                     </View>
                 </View>
             </View>

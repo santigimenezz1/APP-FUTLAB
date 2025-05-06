@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container__detalleNivel: {
-        backgroundColor: "black",
+        backgroundColor: "#33E0E0",
     },
     contentContainer: {
         paddingTop: 50, // Espacio en la parte superior

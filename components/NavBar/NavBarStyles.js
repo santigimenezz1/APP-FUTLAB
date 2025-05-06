@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
      width:"50%",
      gap:10,
      alignItems:"center",
-     borderWidth:1,
    
     },
     container__navBar__titulo__text:{

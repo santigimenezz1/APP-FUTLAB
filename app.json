@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "FITTLLINE",
-    "slug": "fittlline",
+    "name": "FUTLAB",
+    "slug": "futlab",
     "version": "1.0.8",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -47,7 +47,7 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "273eb797-9131-40e0-86af-a1f357d453e6"
+        "projectId": "647b7a26-371a-4aa7-ba9d-923fbc2b6bf4"
       }
     }
   }

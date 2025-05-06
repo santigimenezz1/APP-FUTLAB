@@ -97,7 +97,7 @@ const Registro = ({ navigation }) => {
   console.log(userRegistro)
   return (
     <View style={styles.container__inicioSesion}>
-      <Image width={230} height={45} source={{uri:"https://res.cloudinary.com/dcf9eqqgt/image/upload/v1726996815/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/icon_xoqflq.jpg"}}></Image>
+      <Image width={280} height={120} source={{uri:"https://res.cloudinary.com/dcf9eqqgt/image/upload/v1746456648/ChatGPT_Image_5_may_2025_16_50_32_ethive.png"}}></Image>
       <Formik
         initialValues={{ email: '', password: '', repeatPassword: '' }}
         validationSchema={RegistroSchema}

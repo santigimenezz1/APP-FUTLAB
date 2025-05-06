@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     container__inicioSesion:{
-        backgroundColor: "black",
+        backgroundColor: "#33E0E0",
         width:"100%",
         height:"100%",
         display:"flex",
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         display:"flex",
         alignItems:"center",
         justifyContent:"center",
-        backgroundColor: "hsl(199, 76%, 28%)",
+        backgroundColor: "black",
         
     },
     botonLoginGoogle:{

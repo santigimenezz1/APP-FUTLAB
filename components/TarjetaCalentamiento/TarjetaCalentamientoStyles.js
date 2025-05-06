@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         padding:10,
         borderRadius:10,
         marginTop:10,
-        backgroundColor: "#34cee6",
+        backgroundColor: "hsl(215, 18%, 13%)",
     
     },
     text:{

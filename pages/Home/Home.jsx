@@ -118,12 +118,12 @@ const Home = ({ navigation }) => {
               </>
             )}
 
-            {idiomaActual === "espana" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Imprescindibles</Text>}
-            {idiomaActual === "francia" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Indispensables</Text>}
-            {idiomaActual === "italia" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Indispensabili</Text>}
-            {idiomaActual === "inglaterra" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Essential</Text>}
-            {idiomaActual === "bandera" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Unverzichtbar</Text>}
-            {idiomaActual === "paises bajos" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Unverzichtbar</Text>}
+            {idiomaActual === "espana" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="black" />  Imprescindibles</Text>}
+            {idiomaActual === "francia" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="black" />  Indispensables</Text>}
+            {idiomaActual === "italia" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="black" />  Indispensabili</Text>}
+            {idiomaActual === "inglaterra" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="black" />  Essential</Text>}
+            {idiomaActual === "bandera" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="black" />  Unverzichtbar</Text>}
+            {idiomaActual === "paises bajos" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="black" />  Unverzichtbar</Text>}
 
             {niveles.length > 0 &&
               niveles.filter((nivel) => nivel.data.nombre === "Primeros pasos")
@@ -137,12 +137,12 @@ const Home = ({ navigation }) => {
                   />
                 ))
             }
-            {idiomaActual === "espana" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Ejercicios</Text>}
-            {idiomaActual === "francia" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Exercices</Text>}
-            {idiomaActual === "italia" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Esercizi</Text>}
-            {idiomaActual === "inglaterra" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Exercises</Text>}
-            {idiomaActual === "bandera" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Übungen</Text>}
-            {idiomaActual === "paises bajos" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Übungen</Text>}
+            {idiomaActual === "espana" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="black" />  Ejercicios</Text>}
+            {idiomaActual === "francia" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="black" />  Exercices</Text>}
+            {idiomaActual === "italia" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="black" />  Esercizi</Text>}
+            {idiomaActual === "inglaterra" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="black" />  Exercises</Text>}
+            {idiomaActual === "bandera" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="black" />  Übungen</Text>}
+            {idiomaActual === "paises bajos" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="black" />  Übungen</Text>}
 
             {niveles.length > 0 &&
               niveles

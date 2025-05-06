@@ -16,7 +16,7 @@ const LoginUsuarioNavigator = () => {
         <View style={{ flex: 1 }}>
             <Stack.Navigator screenOptions={{
                 headerStyle: {
-                    backgroundColor:"hsl(199, 76%, 28%)",
+                    backgroundColor:"black",
                 },
                 headerTintColor: 'white', 
                 headerTitleStyle: {

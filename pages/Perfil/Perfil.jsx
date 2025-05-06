@@ -112,15 +112,15 @@ const actualizarPaisUsuario = async (idioma) => {
   };
 
   return (
-    <View style={{ width: "100%", height: "100%", backgroundColor:"black", position: "relative", padding: 20 }}>
+    <View style={{ width: "100%", height: "100%", backgroundColor:"#33E0E0", position: "relative", padding: 20 }}>
       <NavBar />
       <View style={{ marginTop: 20 }}>
-      {idiomaActual === "espana" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Cambiar idioma</Text>}
-      {idiomaActual === "italia" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Cambiare lingua</Text>}
-      {idiomaActual === "francia" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Changer de langue</Text>}
-      {idiomaActual === "bandera" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Sprache wechseln</Text>}
-      {idiomaActual === "inglaterra" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Change language</Text>}
-      {idiomaActual === "paises bajos" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Sprache wechseln</Text>}
+      {idiomaActual === "espana" && <Text style={{ color: "black", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Cambiar idioma</Text>}
+      {idiomaActual === "italia" && <Text style={{ color: "black", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Cambiare lingua</Text>}
+      {idiomaActual === "francia" && <Text style={{ color: "black", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Changer de langue</Text>}
+      {idiomaActual === "bandera" && <Text style={{ color: "black", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Sprache wechseln</Text>}
+      {idiomaActual === "inglaterra" && <Text style={{ color: "black", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Change language</Text>}
+      {idiomaActual === "paises bajos" && <Text style={{ color: "black", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Sprache wechseln</Text>}
 
 
 
@@ -152,12 +152,12 @@ const actualizarPaisUsuario = async (idioma) => {
       </View>
 
       <View style={{ marginTop: 20 }}>
-      {idiomaActual === "espana" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Idioma actual</Text>}
-      {idiomaActual === "italia" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Lingua attuale</Text>}
-      {idiomaActual === "francia" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Langue actuelle</Text>}
-      {idiomaActual === "bandera" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Aktuelle Sprache</Text>}
-      {idiomaActual === "paises bajos" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Aktuelle Sprache</Text>}
-      {idiomaActual === "inglaterra" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Current language</Text>}  
+      {idiomaActual === "espana" && <Text style={{ color: "black", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Idioma actual</Text>}
+      {idiomaActual === "italia" && <Text style={{ color: "black", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Lingua attuale</Text>}
+      {idiomaActual === "francia" && <Text style={{ color: "black", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Langue actuelle</Text>}
+      {idiomaActual === "bandera" && <Text style={{ color: "black", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Aktuelle Sprache</Text>}
+      {idiomaActual === "paises bajos" && <Text style={{ color: "black", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Aktuelle Sprache</Text>}
+      {idiomaActual === "inglaterra" && <Text style={{ color: "black", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Current language</Text>}  
             
       <View style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 5, marginTop: 15 }}>
           <View style={{ display: "flex", flexDirection: "row", justifyContent: "center", gap: 15 }}>
@@ -183,7 +183,7 @@ const actualizarPaisUsuario = async (idioma) => {
           
         </Pressable>
 
-        <Pressable onPress={handleEliminarCuenta} style={{ borderWidth: 1, backgroundColor: "red", borderColor: "hsl(215, 18%, 13%)", width: 170, borderRadius: 4, height: 35, display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <Pressable onPress={handleEliminarCuenta} style={{  backgroundColor: "red", width: 170, borderRadius: 4, height: 35, display: "flex", justifyContent: "center", alignItems: "center" }}>
         {idiomaActual === "espana" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Eliminar cuenta</Text>}
           {idiomaActual === "italia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Eliminare account</Text>}
           {idiomaActual === "francia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Supprimer le compte</Text>}

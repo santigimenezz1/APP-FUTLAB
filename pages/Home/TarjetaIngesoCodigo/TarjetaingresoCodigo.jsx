@@ -56,8 +56,8 @@ const TarjetaIngresoCodigo = ( {CerrarModal, codigoCorrecto, setCodigoCorrecto} 
 
     return (
         <View style={styles.container}>
-            <Image width={25} height={25} source={{uri:"https://res.cloudinary.com/dcf9eqqgt/image/upload/v1720478069/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/cerrar_qrawqr.png"}}></Image>
-            <TextInput onChangeText={(text)=>guardarText(text)} placeholder="Codigo" placeholderTextColor="hsl(0, 0%, 74%)" style={styles.input}/>
+            <Image width={25} height={25} source={{uri:"https://res.cloudinary.com/dcf9eqqgt/image/upload/v1746458914/bloquear_qkwv6o.png"}}></Image>
+            <TextInput onChangeText={(text)=>guardarText(text)} placeholder="Codigo" placeholderTextColor="white" style={styles.input}/>
             <TouchableOpacity onPress={()=>validacionCodigo()} style={styles.button}>
                 <Text style={{color:"white", fontWeight:"bold",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Continuar</Text>
                 </TouchableOpacity>

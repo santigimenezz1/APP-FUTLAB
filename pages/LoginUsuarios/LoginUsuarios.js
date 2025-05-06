@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
     container__loginUsuarios:{
         width:"100%",
         height:"100%",
-        backgroundColor:"black",
+        backgroundColor:"#33E0E0",
         display:"flex",
         alignItems:"center",
         display:"flex",

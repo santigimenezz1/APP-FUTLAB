@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   home: {
     display: "flex",
     alignItems: "center",
-    backgroundColor: "black",
+    backgroundColor: "#33E0E0",
     position: "relative",
     height: "100%",
   },
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
   home__sectionTitle: {
     fontSize: RFValue(20),
-    color: "white",
+    color: "black",
     fontFamily: 'NunitoSans_400Regular',
     marginTop: 30,
     display:"flex",

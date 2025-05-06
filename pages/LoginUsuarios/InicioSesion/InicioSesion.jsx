@@ -36,7 +36,7 @@ const InicioSesion = () => {
     >
       {({ handleChange, handleBlur, handleSubmit, values, errors, touched, setFieldTouched }) => (
         <View style={styles.container__inicioSesion}>
-        <Image width={230} height={45} source={{uri:"https://res.cloudinary.com/dcf9eqqgt/image/upload/v1726996815/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/icon_xoqflq.jpg"}}></Image>
+        <Image width={230} height={45} source={{uri:"https://res.cloudinary.com/dcf9eqqgt/image/upload/v1746456648/ChatGPT_Image_5_may_2025_16_50_32_ethive.png"}}></Image>
 
           <View style={styles.container__form}>
             <TextInput

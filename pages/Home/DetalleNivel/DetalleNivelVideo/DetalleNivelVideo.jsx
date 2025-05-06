@@ -58,13 +58,13 @@ const DetalleNivelVideo = () => {
 
     return (
         <ScrollView>
-            <View style={{ backgroundColor: "black", paddingBottom: RFValue(50), height: "auto" }}>
+            <View style={{ backgroundColor: "#33E0E0", paddingBottom: RFValue(50), height: "auto" }}>
                 <View style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: 30 }}>
                     <View style={{ display: "flex", width: "80%", marginBottom: 10, flexDirection: "row-reverse", justifyContent: "space-between" }}>
                         <View>
                             <View style={{ display: "flex", flexDirection: "row", gap: 5 }}>
                                 {ejercicio.estrellas.completas.map((_, index) => (
-                                    <FontAwesome key={index} name="star" size={24} color="hsl(199, 76%, 28%)" />
+                                    <FontAwesome key={index} name="star" size={24} color="black" />
                                 ))}
                                 {ejercicio.estrellas.vacias.map((_, index) => (
                                     <FontAwesome key={index} name="star-o" size={24} color="hsl(199, 76%, 28%)" />
@@ -72,7 +72,7 @@ const DetalleNivelVideo = () => {
                             </View>
                         </View>
                     </View>
-                    <Text style={{ color: "white", letterSpacing: 2, fontSize: 25, marginBottom: 10 }}>
+                    <Text style={{ color: "black", letterSpacing: 2, fontSize: 25, marginBottom: 10 }}>
                         {botonActive}
                     </Text>
                     
@@ -114,8 +114,7 @@ const DetalleNivelVideo = () => {
 
                             <TouchableOpacity 
                                 style={botonActive === "Training" ? styles.botonOn : styles.botonDesactivado}
-                                onPress={() => setBotonActive("Training")}
-                            >
+                                onPress={() => setBotonActive("Training")}>
                                 <Text style={{ color: "white", textAlign: "center", letterSpacing: 1 }}>Entrenamiento</Text>
                             </TouchableOpacity>
                         </View>

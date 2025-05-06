@@ -2,29 +2,29 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
 botonLoginUsuario:{
-    width:150,
+    width:160,
     height:40,
     borderRadius:12,
     display:"flex",
     alignItems:"center",
     justifyContent:"center",
-    backgroundColor: "hsl(199, 76%, 28%)",
+    backgroundColor: "hsl(199, 51.30%, 31.40%)",
 },
 botonText:{
     color:"white",
 },
 botonRegistroUsuario:{
-    width:150,
+    width:160,
     height:40,
     borderRadius:12,
     display:"flex",
     alignItems:"center",
     justifyContent:"center",
-    backgroundColor: "hsl(215, 18%, 13%)",
+    backgroundColor: "black",
 },
 container__botonesRegistro:{
     display:"flex",
-    flexDirection:"row",
+    flexDirection:"column",
     gap:20
 }
 })
